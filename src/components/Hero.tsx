@@ -4,8 +4,8 @@ export default function Hero() {
     return (
         <div className="bg-[#f0efea] h-screen relative">
             <Navbar />
-            <div className="flex flex-col items-center  p-5 text-center sm:gap-28 gap-20">
-                <div className="sm:mt-36 mt-16 ">
+            <div className="flex flex-col items-center  p-5 text-center  gap-20">
+                <div className=" mt-16 ">
                     <p className="font-bold rounded-full bg-white text-lg p-5">Hi, I&#x2019;m Ahmed 🖐</p>
                 </div>
                 <div className="">
