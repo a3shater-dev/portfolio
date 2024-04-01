@@ -1,5 +1,4 @@
-'use client'
-import clsx from "clsx";
+"use client"
 import { FaAngleUp, FaAngleDown } from "react-icons/fa";
 export default function About() {
     const dataList = [{
@@ -12,14 +11,14 @@ export default function About() {
     }]
     function handleClick(e: any) {
         const ele = e.currentTarget;
-        if (ele.classList.contains('active')) {
+        if (ele.classList.contains("active")) {
             ele.classList.remove("active");
-            ele.classList.add('deactive')
+            ele.classList.add("deactive")
             ele.classList.remove("ring-offset-2")
             ele.classList.remove("ring-2")
         }
         else {
-            ele.classList.remove('deactive');
+            ele.classList.remove("deactive");
             ele.classList.add("active")
             ele.classList.add("ring-offset-2")
             ele.classList.add("ring-2")
@@ -30,7 +29,7 @@ export default function About() {
             <div className="max-w-6xl mx-auto py-14">
                 <div>
                     <h3 className="text-3xl font-bold mb-5">About Me</h3>
-                    <p className="mb-7 text-gray-400">Hello I'm Ahmed, Full-Stack web developer with different technologies like Laravel, React, Nextjs, Tailwindcss, bootstrap 5, etc...</p>
+                    <p className="mb-7 text-gray-400">Hello I"m Ahmed, Full-Stack web developer with different technologies like Laravel, React, Nextjs, Tailwindcss, bootstrap 5, etc...</p>
                 </div>
                 <div>
                     <h2 className="text-2xl mb-5">More</h2>
