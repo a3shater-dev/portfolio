@@ -29,7 +29,7 @@ export default function About() {
             <div className="max-w-6xl mx-auto py-14">
                 <div>
                     <h3 className="text-3xl font-bold mb-5">About Me</h3>
-                    <p className="mb-7 text-gray-400">Hello I"m Ahmed, Full-Stack web developer with different technologies like Laravel, React, Nextjs, Tailwindcss, bootstrap 5, etc...</p>
+                    <p className="mb-7 text-gray-400">Hello I&#x2019;m Ahmed, Full-Stack web developer with different technologies like Laravel, React, Nextjs, Tailwindcss, bootstrap 5, etc...</p>
                 </div>
                 <div>
                     <h2 className="text-2xl mb-5">More</h2>
@@ -37,7 +37,7 @@ export default function About() {
                         {
                             dataList.map((ele) => {
                                 return (
-                                    <div className="group h-44 border rounded p-3 transition-all select-none cursor-pointer flex flex-col sm:gap-2 gap-1" onClick={handleClick}>
+                                    <div key={ele.name} className="group h-44 border rounded p-3 transition-all select-none cursor-pointer flex flex-col sm:gap-2 gap-1" onClick={handleClick}>
                                         <div className="flex justify-between items-center">
                                             <div>
                                                 <p className="uppercase">{ele.name}</p>

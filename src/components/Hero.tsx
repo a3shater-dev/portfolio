@@ -6,7 +6,7 @@ export default function Hero() {
             <Navbar />
             <div className="flex flex-col items-center  p-5 text-center sm:gap-28 gap-20">
                 <div className="sm:mt-36 mt-16 ">
-                    <p className="font-bold rounded-full bg-white text-lg p-5">Hi, I"m Ahmed 🖐</p>
+                    <p className="font-bold rounded-full bg-white text-lg p-5">Hi, I&#x2019;m Ahmed 🖐</p>
                 </div>
                 <div className="">
                     <h2 className="sm:text-7xl text-4xl font-bold">Full-Stack web developer</h2>
