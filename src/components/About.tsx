@@ -1,13 +1,19 @@
 "use client"
+import { url } from "inspector";
+import { RedirectType, redirect } from "next/navigation";
+import { FaInfoCircle } from "react-icons/fa";
+import { FaExternalLinkAlt } from "react-icons/fa";
 import { FaAngleUp, FaAngleDown } from "react-icons/fa";
 export default function About() {
     const dataList = [{
-        name: "Education",
-        description: "Lorem ipsum dolor sit amet, consectetur adipisicing elessitatibus, ipsum repudiandae harum, quia, assumenda quos facilis mollitia? Voluptates obcaecati inventore repellendus modi. Et, facilis minima."
+        name: "Tqdum web app",
+        description: "Lorem ipsum dolor sit amet, consectetur adipisicing elessitatibus, ipsum repudiandae harum, quia, assumenda quos facilis mollitia? Voluptates obcaecati inventore repellendus modi. Et, facilis minima.",
+        url: ""
     },
     {
         name: "Education",
-        description: "a, assumenda quos facilis mollitia? Voluptates obcaecati inventore repellendus modi. Et, facilis minima."
+        description: "a, assumenda quos facilis mollitia? Voluptates obcaecati inventore repellendus modi. Et, facilis minima.",
+        url: "https://google.com"
     }]
     function handleClick(e: any) {
         const ele = e.currentTarget;
@@ -32,12 +38,24 @@ export default function About() {
                     <p className="mb-7 text-gray-400">Hello I&#x2019;m Ahmed, Full-Stack web developer with different technologies like Laravel, React, Nextjs, Tailwindcss, bootstrap 5, etc...</p>
                 </div>
                 <div>
-                    <h2 className="text-2xl mb-5">More</h2>
+                    <h2 className="text-2xl mb-5">Projects
+                        <span className="relative text-sm  ml-3 cursor-pointer text-gray-400 group">( Double click
+                            <FaExternalLinkAlt className="inline mx-1" />
+
+                            )
+
+                            <span className="group-hover:inline text-black hidden bg-white rounded-sm absolute w-[200px] text-center -top-7 left-0 opacity-90 "> source code | project live
+
+                            </span>
+                        </span>
+                    </h2>
                     <div className="grid sm:grid-cols-2 gap-5">
                         {
                             dataList.map((ele) => {
                                 return (
-                                    <div key={ele.name} className="group h-44 border rounded p-3 transition-all select-none cursor-pointer flex flex-col sm:gap-2 gap-1" onClick={handleClick}>
+                                    <div key={ele.name} className="group h-44 border rounded p-3 transition-all select-none cursor-pointer flex flex-col sm:gap-2 gap-1" onClick={handleClick} onDoubleClick={() => {
+                                        window.open(ele.url)
+                                    }}>
                                         <div className="flex justify-between items-center">
                                             <div>
                                                 <p className="uppercase">{ele.name}</p>
@@ -57,6 +75,6 @@ export default function About() {
                     </div>
                 </div>
             </div>
-        </div>
+        </div >
     )
 }
