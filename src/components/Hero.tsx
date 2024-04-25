@@ -2,7 +2,7 @@ import Navbar from "@/components/Navbar"
 import { FaAngleDoubleDown } from "react-icons/fa"
 export default function Hero() {
     return (
-        <div className="bg-[#f0efea] h-screen relative">
+        <div className="bg-[#f0efea]">
             <Navbar />
             <div className="flex flex-col items-center  p-5 text-center  gap-20">
                 <div className=" mt-16 ">
@@ -22,7 +22,7 @@ export default function Hero() {
                     </a>
                 </div>
             </div>
-            <div className="h-20 absolute bottom-0 right-0 left-0 bg-[#76d6c6] flex items-center justify-evenly ">
+            <div className="h-20 mt-16 rounded-lg  bg-[#76d6c6] flex items-center justify-evenly ">
                 <div >
                     <img className="w-10 h-10" src="/loading1.svg" alt="loading" />
                 </div>
